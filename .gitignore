@@ -1,0 +1,18 @@
+# Pastas de compilação e artefatos gerados (O que você quer esconder)
+.gradle/
+build/
+out/
+bin/
+
+# Configurações específicas do IntelliJ IDEA
+# (Geralmente não são enviadas para evitar conflitos de caminhos locais)
+.idea/
+*.iml
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs de execução
+*.log
