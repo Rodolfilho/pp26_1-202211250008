@@ -1,3 +1,5 @@
+package padroes.avividadeBridge;
+
 // Implementador.java
 interface Implementador {
     void getDados(String tipo);

@@ -4,7 +4,7 @@ public class LogSystem {
 
 
     private static LogSystem instancia;
-    private String filePath = Caminho.CAMINHO_ARQUIVO;
+    private final String filePath = Caminho.CAMINHO_ARQUIVO;
 
 
 

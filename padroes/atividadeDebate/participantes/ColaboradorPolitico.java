@@ -1,24 +1,27 @@
 package padroes.atividadeDebate.participantes;
 
 
-import padroes.atividadeDebate.debate.MediadorBase;
+
+import padroes.atividadeDebate.debate.MediarDebate;
+import padroes.atividadeDebate.log.LogSystem;
 import padroes.atividadeDebate.microfone.Microfone;
 
-public abstract class ColaboradorPolitico {
+public class ColaboradorPolitico {
     protected String nome;
     protected String partido;
     protected boolean inquiridor;
     protected Microfone microfone;
-    protected MediadorBase mediador;
+    protected MediarDebate mediador;
 
 
-    ColaboradorPolitico(String nome,String partido){
+
+    public ColaboradorPolitico(String nome,String partido){
         this.nome = nome;
         this.partido = partido;
         this.inquiridor = false;
     }
 
-    public abstract void operacaoMediada();
+    public void operacaoMediada(){}
 
     public void setNome(String nome){
         this.nome = nome;
@@ -36,14 +39,15 @@ public abstract class ColaboradorPolitico {
         return partido;
     }
 
-    public void setMediador(MediadorBase mediador){
+    public void setMediador(MediarDebate mediador){
         this.mediador = mediador;
 
     }
-
-
-    //pRECISO VER MELHOR O QUE É
-    public void setInquiridor(){}
-    public void getInquiridor(){}
+    public void setInquiridor(boolean inquiridor){
+        this.inquiridor = inquiridor;
+    }
+    public boolean getInquiridor(){
+        return inquiridor;
+    }
 
 }
